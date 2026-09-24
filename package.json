@@ -1,0 +1,28 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@clerk/express": "^2.1.70",
+    "@clerk/react": "^6.17.0",
+    "better-sqlite3": "^13.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^10.0.5",
+    "nodemon": "^3.1.14",
+    "vite": "^8.3.0"
+  },
+  "scripts": {
+    "client": "vite",
+    "server": "node --env-file=.env server/server.js",
+    "client:dev": "vite",
+    "server:dev": "nodemon --exec \"node --env-file=.env\" server/server.js",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client\"",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+
+}
