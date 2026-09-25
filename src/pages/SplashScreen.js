@@ -9,13 +9,15 @@ function SplashScreen() {
   return (
     <main className="splash-screen">
       <div className="splash-content">
-      <img src={logoImage} alt="Starfleet Stash logo"
+    <img
+  src={logoImage}
+  alt="Starfleet Stash logo"
   className="splash-logo-image"
 />
 
-        <h1>Starfleet Stash</h1>
+        <h1></h1>
 
-        <p>Your All-in-One Expense Control Center.</p>
+        <p></p>
 
         <div
           className="loading-indicator"

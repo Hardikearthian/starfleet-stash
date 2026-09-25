@@ -42,7 +42,7 @@ function LandingPage() {
           <h2>A clearer view of your everyday spending.</h2>
 
           <p>
-            Spendwise keeps the important things simple, so you can focus on
+            Starfleet Stash keeps the important things simple, so you can focus on
             building better financial habits.
           </p>
         </div>

@@ -23,9 +23,9 @@ function App() {
     };
   }, []);
 
-  if (isSplashVisible || !isLoaded) {
-    return <SplashScreen />;
-  }
+ if (isSplashVisible || !isLoaded) {
+  return <SplashScreen />;
+}
 
   if (isSignedIn) {
     return <ExpenseDashboard />;

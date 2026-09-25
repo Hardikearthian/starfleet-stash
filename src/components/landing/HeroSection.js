@@ -1,4 +1,6 @@
 import { SignUpButton } from '@clerk/react';
+
+
 /**
  * Displays the main landing page introduction.
  *
@@ -8,6 +10,7 @@ function HeroSection() {
   return (
     <section className="hero-section">
       <div className="hero-content">
+    
         <p className="hero-eyebrow">A calmer way to manage money</p>
 
         <h1>
@@ -16,7 +19,7 @@ function HeroSection() {
         </h1>
 
         <p className="hero-description">
-          Spendwise helps you track daily expenses, understand your habits,
+          Starfleet Stash helps you track daily expenses, understand your habits,
           and take control of your financial direction.
         </p>
 

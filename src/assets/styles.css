@@ -175,111 +175,53 @@ li button:hover {
 }
 
 
-/* splash screen css*/
-
-.splash-screen {
-  display: grid;
-  min-height: 100vh;
-  margin: 0;
-  place-items: center;
-  background:
-    radial-gradient(circle at top right, #dbeafe, transparent 35%),
-    #f8fafc;
-}
-
-.splash-content {
-  text-align: center;
-  animation: splash-entry 600ms ease-out;
-}
-
-.brand-mark {
-  display: grid;
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 20px;
-  place-items: center;
-  border-radius: 22px;
-  background-color: #2563eb;
-  color: #ffffff;
-  font-size: 34px;
-  font-weight: 700;
-  box-shadow: 0 14px 30px rgb(37 99 235 / 25%);
-}
-
-.splash-content h1 {
-  margin: 0;
-  font-size: 38px;
-}
-
-.splash-content p {
-  margin: 8px 0 24px;
-}
-
-.loading-indicator {
-  width: 34px;
-  height: 34px;
-  margin: 0 auto;
-  border: 3px solid #dbeafe;
-  border-top-color: #2563eb;
-  border-radius: 50%;
-  animation: loading-spin 800ms linear infinite;
-}
-
-@keyframes splash-entry {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes loading-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.splash-logo-image {
-  display: block;
-  width: min(500px, 88vw);
-  margin: 0 auto 24px;
-  border-radius: 18px;
-  box-shadow: 0 20px 45px rgb(15 23 42 / 25%);
-}
 
 
 /* navigation css*/
-
-.brand-logo-image {
-  width: 38px;
-  height: 38px;
-  object-fit: cover;
-  object-position: left center;
-  border-radius: 10px;
-}
 .landing-navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: min(100% - 40px, 1180px);
-  margin: 0 auto;
-  padding: 24px 0;
+  min-height: 76px;
+  padding: 10px 32px;
+  gap: 10px;
+  
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  color: #111827;
-  font-size: 20px;
-  font-weight: 700;
+  gap: 8px;
+  flex-shrink: 0;
   text-decoration: none;
 }
 
+.brand-logo-image {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-right: -8px;
+  object-fit: contain;
+}
+.brand span {
+  color: #2563eb;
+  font-size: 23px;
+  font-weight: 1000;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .landing-navigation {
+    min-height: 64px;
+    padding: 8px 16px;
+  }
+
+  .brand-logo-image {
+    width: 165px;
+    height: 52px;
+  }
+}
 .brand-symbol {
   display: grid;
   width: 36px;
@@ -315,6 +257,8 @@ li button:hover {
 
 
 /* hero section*/
+
+
 .secondary-button {
   background-color: transparent;
   color: #2563eb;
@@ -400,7 +344,7 @@ li button:hover {
   align-items: center;
   gap: 10px;
   margin-top: 34px;
-  color: #94a3b8;
+  color: #64a4fe;
   font-size: 12px;
 }
 
@@ -590,6 +534,7 @@ li button:hover {
   .preview-main-card {
     padding: 18px;
   }
+  
 }
 
 
@@ -985,4 +930,102 @@ li button:hover {
   min-width: 8px;
   border-radius: inherit;
   background: linear-gradient(90deg, #60a5fa, #2563eb);
+}
+
+
+
+/*splash screen */
+
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+
+  place-items: center;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at top right, #7bb4ff, transparent 35%),
+    #49a4ff;
+}
+
+.splash-content {
+  width: min(680px, 92vw);
+  padding: 24px;
+  text-align: center;
+  animation: splash-entry 600ms ease-out;
+}
+
+.splash-logo-image {
+  display: block;
+  width: min(620px, 88vw);
+  max-height: 58vh;
+  margin: 0 auto 24px;
+
+  border: none;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: 0;
+  background: transparent;
+}
+
+.splash-content h1 {
+  margin: 0;
+  color: #f0f1f4;
+  font-size: clamp(30px, 5vw, 42px);
+  line-height: 1.1;
+}
+
+.splash-content p {
+  margin: 10px 0 24px;
+  color: #61738d;
+  font-size: 16px;
+}
+
+.loading-indicator {
+  width: 34px;
+  height: 34px;
+  margin: 0 auto;
+
+  border: 3px solid #dbeafe;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+
+  animation: loading-spin 800ms linear infinite;
+}
+
+@keyframes splash-entry {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .splash-content {
+    width: 94vw;
+    padding: 16px;
+  }
+
+  .splash-logo-image {
+    width: 90vw;
+    max-height: 48vh;
+    border-radius: 14px;
+  }
 }
